@@ -1,5 +1,5 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-knitrengines is package to collect and seamlessly add new language engines to knitr
+`knitrengines` is package to collect and seamlessly add new language engines to knitr
 
 You can thank [Wendy Smoak](http://wsmoak.net/2015/09/01/executable-elixir-tufte-handout.html) for this package as a [comment on a DDS post](http://datadrivensecurity.info/blog/posts/2015/Jun/running-other-languages-in-r-markdown-files/) sparked it.
 
