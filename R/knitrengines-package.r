@@ -22,7 +22,7 @@
 #'
 #' You can contribe to the project on GitHub and add support for other language
 #' code chunks. The only real downside is that these language chunks do not have
-#' access to the variables in across chunks, so you have to export the data from
+#' access to the variables in/across chunks, so you have to export the data from
 #' previous chunks to files (or databases, etc.) to access it (if needed).
 #'
 #' Before you go creating other engines, these are the ones knitr already
