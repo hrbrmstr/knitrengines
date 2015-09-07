@@ -1,5 +1,5 @@
 Package: knitrengines
-Title: Collection of Language Engines for Use with the knitr Package
+Title: Collection of Language Engines for Use with the 'knitr' Package
 Version: 0.0.0.9000
 Authors@R: c(person("Bob", "Rudis", email="bob@rudis.net", role=c("aut", "cre")),
              person("Wendy", "Smoak", role="ctb"))
