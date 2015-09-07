@@ -1,0 +1,45 @@
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+knitrengines is package to collect and seamlessly add knitr engines to knitr
+
+You can thank [Wendy Smoak](http://wsmoak.net/2015/09/01/executable-elixir-tufte-handout.html) for this package as a [comment on a DDS post](http://datadrivensecurity.info/blog/posts/2015/Jun/running-other-languages-in-r-markdown-files/) sparked it.
+
+The knitr package already has support for a [plethora](https://www.rforge.net/doc/packages/knitr/knit_engines.html) of languages besides R code chunks (26 as of the last update to this package). That is probably sufficient for the vast majority of users.
+
+However, if you need to perform some processing in another languages and want to include it in your reproducible workflow, this package will allow you to incorporate those language code chunks provided there is a matching knitr language processor available.
+
+To use one of these alternate code chunks, just ensure you have a call to `library(knitrengines)` at in an R code chunk at the top of your R markdown file then use one of the available engines via the short name below as the package will auto-register them on attach.
+
+This package contains support for the following engines:
+
+-   `go` : Go language support
+-   `elixir` : Elixir language support
+
+You can contribe to the project and add support for other language code chunks by:
+
+-   forking this repo
+-   adding a new `xyz_engine.r` under the `R` directory ensuring you add yourself as an `@author`
+-   adding that engine to the list in `zzz.r`
+-   update `DESCRIPTION` and add yourself as a contributor and update the third dottedn number in the version string (i.e. 0.0.0.9000 -\> 0.0.1.9000)
+-   update `knitr_engine_test.Rmd` and add a (small) example of your engine
+-   update the `README.Rmd` to include your new engine.
+-   submit a PR
+
+The only real downside is that these language chunks do not have access to the variables in across chunks, so you have to export the data from previous chunks to files (or databases, etc.) to access it (if needed).
+
+Before you go creating other engines, these are the ones knitr already supports: `awk`, `bash`, `coffee`, `gawk`, `groovy`, `haskell`, `node`, `perl`, `python`, `Rscript`, `ruby`, `sas`, `scala`, `sed`, `sh`, `zsh`, `highlight`, `Rcpp`, `tikz`, `dot`, `c`, `fortran`, `asy`, `cat`, `asis`, `stan`.
+
+### News
+
+-   Version 0.0.0.9000 released
+
+### Installation
+
+``` r
+devtools::install_github("hrbrmstr/knitrengines")
+```
+
+For usage, see `knitr_engine_test.[Rmd|html]`.
+
+### Code of Conduct
+
+Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.

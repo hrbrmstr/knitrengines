@@ -1,8 +1,12 @@
 Package: knitrengines
-Title: What the Package Does (one line, title case)
+Title: Collection of Language Engines for Use with the knitr Package
 Version: 0.0.0.9000
-Authors@R: c(person("Bob", "Rudis", email = "bob@rudis.net", role = c("aut", "cre")))
-Description: What the package does (one paragraph)
-Depends: R (>= 3.2.2)
+Authors@R: c(person("Bob", "Rudis", email="bob@rudis.net", role=c("aut", "cre")),
+             person("Wendy", "Smoak", role="ctb"))
+Maintainer: Bob Rudis <bob@rudis.net>
+Description: The knitr package lets you use other languages in knitr 'chunks'. This
+    package is a collection of languages processors not built-in with knitr.
+Depends: R (>= 3.0.0), knitr
 License: AGPL + file LICENSE
 LazyData: true
+Suggests: testthat
