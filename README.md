@@ -13,13 +13,14 @@ This package contains support for the following engines:
 
 -   `go` : Go language support
 -   `elixir` : Elixir language support
+-   `pygments` : Use [pygments](http://pygments.org/) to stylize non-executable code blocks. See `knitrengines::knitr_pygments_engine` for all the "gotchas".
 
 You can contribe to the project and add support for other language code chunks by:
 
 -   forking this repo
 -   adding a new `xyz_engine.r` under the `R` directory ensuring you add yourself as an `@author`
 -   adding that engine to the list in `zzz.r`
--   update `DESCRIPTION` and add yourself as a contributor and update the third dottedn number in the version string (i.e. 0.0.0.9000 -\> 0.0.1.9000)
+-   update `DESCRIPTION` and add yourself as a contributor and update the third dottedn number in the version string (i.e. 0.0.0.9000 -&gt; 0.0.1.9000)
 -   update `knitr_engine_test.Rmd` and add a (small) example of your engine
 -   update the `README.Rmd` to include your new engine.
 -   submit a PR
@@ -30,6 +31,7 @@ Before you go creating other engines, these are the ones knitr already supports:
 
 ### News
 
+-   Version 0.0.1.9000 released
 -   Version 0.0.0.9000 released
 
 ### Installation

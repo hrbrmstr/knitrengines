@@ -24,8 +24,10 @@ as the package will auto-register them on attach.
 
 This package contains support for the following engines:
 
-\describe{ \item{\code{go}}{Go language support} \item{\code{elixir}}{Elixir
-language support} }
+\describe{
+  \item{\code{go}}{Go language support}
+  \item{\code{elixir}}{Elixir language support}
+}
 
 You can contribe to the project on GitHub and add support for other language
 code chunks. The only real downside is that these language chunks do not have

@@ -1,0 +1,50 @@
+---
+title: "pygtest"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitrengines)
+```
+
+```{pygments test, pyg.ext="py", pyg.sty="github"}
+import something.please
+
+print("Hello, world!")
+```
+
+```{pygments test2, pyg.ext="go", pyg.sty="github"}
+package main
+
+import "fmt"
+
+func main() {
+
+    s := make([]string, 3)
+    fmt.Println("emp:", s)
+
+    s[0] = "a"
+    s[1] = "b"
+    s[2] = "c"
+    twoD := make([][]int, 3)
+    for i := 0; i < 3; i++ {
+        innerLen := i + 1
+        twoD[i] = make([]int, innerLen)
+        for j := 0; j < innerLen; j++ {
+            twoD[i][j] = i + j
+        }
+    }
+    fmt.Println("2d: ", twoD)
+}
+```
+
+```{pygments test3, pyg.ext="ex", pyg.sty="github"}
+defmodule Math do
+  def sum(a, b) do
+    a + b
+  end
+end
+
+IO.puts "The answer is #{ Math.sum(4,3) }"    
+```
