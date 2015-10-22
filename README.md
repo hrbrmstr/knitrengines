@@ -13,7 +13,8 @@ This package contains support for the following engines:
 
 -   `go` : Go language support
 -   `elixir` : Elixir language support
--   `pygments` : Use [pygments](http://pygments.org/) to stylize non-executable code blocks. See `knitrengines::knitr_pygments_engine` for all the "gotchas".
+-   `pygments` : Use [pygments](http://pygments.org/) to stylize non-executable code blocks. See `knitrengines::knitr_pygments_engine` for all the "gotchas"
+-   `gnuplot` : Use [gnuplot](http://www.gnuplot.info/) for plotting
 
 You can contribe to the project and add support for other language code chunks by:
 
@@ -31,6 +32,7 @@ Before you go creating other engines, these are the ones knitr already supports:
 
 ### News
 
+-   Version 0.1.0.9000 gnuplot
 -   Version 0.0.1.9000 released
 -   Version 0.0.0.9000 released
 
