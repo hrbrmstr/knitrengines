@@ -1,0 +1,49 @@
+---
+title: "Awk CSV Example"
+code-tools: true
+format:
+  html:
+    self-contained: true
+    embed-resources: true
+    theme:
+      light: flatly
+      dark: darkly
+engine: knitr
+---
+
+Demonstration that awk's CSV support.
+
+```{r setup, echo=FALSE}
+library(knitrengines)
+```
+
+Use an old friend:
+
+```{r mtcars}
+write.csv(mtcars, "mtcars.csv", row.names = FALSE)
+```
+
+```{cawk, mtcars-awk-block, awk.csv=TRUE}
+#| awk.var.mpg: 1
+#| awk.var.cyl: 2
+#| awk.var.disp: 3
+#| awk.var.hp: 4
+#| awk.var.drat: 5
+#| awk.var.wt: 6
+#| awk.var.qsec: 7
+#| awk.var.vs: 8
+#| awk.var.am: 9
+#| awk.var.gear: 10
+#| awk.var.carb: 11
+#| awk.file.1: "mtcars.csv"
+NR > 1 { 
+  cum_mpg_by[$cyl] += $mpg
+} END { 
+  for (cyl in cum_mpg_by) 
+    print cyl " => " cum_mpg_by[cyl] 
+}
+```
+
+```{r cleanup}
+file.remove("mtcars.csv")
+```
