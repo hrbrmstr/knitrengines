@@ -7,9 +7,16 @@
 #' use this knitr engine, you will need to do the following:
 #'
 #' - `git clone git@github.com:onetrueawk/awk.git`
-#' - `git checkout csv`
 #' - `make`
 #' - Move `a.out` to `cawk` somewhere on your `PATH`
+#'
+#' Previous instructions had one checkout the `csv` branch but
+#' thanks [to a tip](https://fosstodon.org/@_TimTaylor/111058284203768015)
+#' (thanks, Tim!) that is no longer necessary. This means that your
+#' system's Awk may just get an update soon, rendering the `cawk`
+#' bit unnecessary. I'll work on adding some checks to see if the
+#' Awk you've got built-in has CSV support and use that if it finds it
+#' otherwise have it prompt you to do this dance.
 #'
 #' You can find an example Quarto document that has a `cawk`
 #' section via:
